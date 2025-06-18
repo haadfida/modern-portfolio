@@ -366,12 +366,12 @@ function App() {
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
                 <Linkedin className="w-8 h-8 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">LinkedIn</h3>
-                <p className="text-slate-400">@yourprofile</p>
+                <p className="text-slate-400">@haadfida</p>
               </div>
             </div>
 
             <a
-              href="mailto:your@email.com"
+              href="mailto:haad99@gmail.com"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg font-semibold transition-all transform hover:scale-105"
             >
               <Mail className="w-5 h-5 mr-2" />
@@ -385,13 +385,13 @@ function App() {
       <footer className="bg-slate-900/50 border-t border-slate-700/50 py-8">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="flex justify-center space-x-6 mb-4">
-            <a href="https://github.com" className="text-slate-400 hover:text-white transition-colors">
+            <a href="https://github.com/haadfida" className="text-slate-400 hover:text-white transition-colors">
               <Github size={20} />
             </a>
-            <a href="https://linkedin.com" className="text-slate-400 hover:text-white transition-colors">
+            <a href="https://linkedin.com/in/haadfida" className="text-slate-400 hover:text-white transition-colors">
               <Linkedin size={20} />
             </a>
-            <a href="mailto:your@email.com" className="text-slate-400 hover:text-white transition-colors">
+            <a href="mailto:haad99@gmail.com" className="text-slate-400 hover:text-white transition-colors">
               <Mail size={20} />
             </a>
           </div>
