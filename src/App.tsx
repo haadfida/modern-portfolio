@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X, Github, Linkedin, Mail, ExternalLink, ChevronDown } from 'lucide-react'
 import './App.css'
+import pocketPantryImg from './assets/pocket-pantry.png';
+import sprintTrackerImg from './assets/sprint-tracker.png';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -44,7 +46,7 @@ function App() {
     {
       title: "pocket-pantry",
       description: "Offline-first recipe & grocery planner built with React Native. Features meal planning, grocery list management, and robust local storage with SQLite.",
-      image: "/src/assets/pocket-pantry.png",
+      image: pocketPantryImg,
       tech: ["React Native", "Expo", "SQLite", "TypeScript"],
       github: "https://github.com/haadfida/pocket-pantry",
       demo: "https://github.com/haadfida/pocket-pantry",
@@ -53,7 +55,7 @@ function App() {
     {
       title: "SprintTracker",
       description: "A comprehensive project management tool built with Ruby on Rails. Features sprint planning, task tracking, and team collaboration capabilities with 301+ commits showcasing iterative development.",
-      image: "/src/assets/sprint-tracker.png",
+      image: sprintTrackerImg,
       tech: ["Ruby on Rails", "HTML", "JavaScript", "SCSS"],
       github: "https://github.com/haadfida/Sprint-Tracker",
       demo: "https://github.com/haadfida/Sprint-Tracker",
