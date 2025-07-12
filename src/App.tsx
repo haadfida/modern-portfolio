@@ -44,7 +44,7 @@ function App() {
     {
       title: "pocket-pantry",
       description: "Offline-first recipe & grocery planner built with React Native. Features meal planning, grocery list management, and robust local storage with SQLite.",
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=300&fit=crop",
+      image: "/src/assets/pocket-pantry.png",
       tech: ["React Native", "Expo", "SQLite", "TypeScript"],
       github: "https://github.com/haadfida/pocket-pantry",
       demo: "https://github.com/haadfida/pocket-pantry",
@@ -53,7 +53,7 @@ function App() {
     {
       title: "SprintTracker",
       description: "A comprehensive project management tool built with Ruby on Rails. Features sprint planning, task tracking, and team collaboration capabilities with 301+ commits showcasing iterative development.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
+      image: "/src/assets/sprint-tracker.png",
       tech: ["Ruby on Rails", "HTML", "JavaScript", "SCSS"],
       github: "https://github.com/haadfida/Sprint-Tracker",
       demo: "https://github.com/haadfida/Sprint-Tracker",
