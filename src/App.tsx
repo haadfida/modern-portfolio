@@ -353,21 +353,21 @@ function App() {
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
-                <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+              <a href="mailto:haad99@gmail.com" className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-purple-400/50 transition-all block group" style={{ textDecoration: 'none' }}>
+                <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4 group-hover:text-purple-300 transition-colors" />
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
                 <p className="text-slate-400">haad99@gmail.com</p>
-              </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
-                <Github className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+              </a>
+              <a href="https://github.com/haadfida" target="_blank" rel="noopener noreferrer" className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-purple-400/50 transition-all block group" style={{ textDecoration: 'none' }}>
+                <Github className="w-8 h-8 text-purple-400 mx-auto mb-4 group-hover:text-purple-300 transition-colors" />
                 <h3 className="text-lg font-semibold text-white mb-2">GitHub</h3>
                 <p className="text-slate-400">@haadfida</p>
-              </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
-                <Linkedin className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+              </a>
+              <a href="https://linkedin.com/in/haadfida" target="_blank" rel="noopener noreferrer" className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-purple-400/50 transition-all block group" style={{ textDecoration: 'none' }}>
+                <Linkedin className="w-8 h-8 text-purple-400 mx-auto mb-4 group-hover:text-purple-300 transition-colors" />
                 <h3 className="text-lg font-semibold text-white mb-2">LinkedIn</h3>
                 <p className="text-slate-400">@haadfida</p>
-              </div>
+              </a>
             </div>
 
             <a
