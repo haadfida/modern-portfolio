@@ -1,134 +1,137 @@
+@import '@fontsource-variable/bricolage-grotesque/wght.css';
+@import '@fontsource-variable/public-sans/wght.css';
+@import '@fontsource/ibm-plex-mono/latin-400.css';
+@import '@fontsource/ibm-plex-mono/latin-500.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Layout: an inventory ledger. Each project is a record with a mono metadata column beside it,
+   and the hero is an asset tag for the person. */
+:root {
+  --bg: #f2f4f1;          /* grey with a slight green bias toward the accent */
+  --surface: #ffffff;
+  --sunk: #e7ebe6;
+  --ink: #141a18;
+  --muted: #535d59;
+  --line: #d3d9d4;
+  --accent: #0b6657;      /* status-OK teal */
+  --accent-ink: #ffffff;
+  --accent-soft: #d8ebe5;
+
+  --font-display: 'Bricolage Grotesque Variable', 'Avenir Next', 'Segoe UI', sans-serif;
+  --font-body: 'Public Sans Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #0f1312;
+    --surface: #161c1a;
+    --sunk: #1d2422;
+    --ink: #e6ece9;
+    --muted: #9ba7a2;
+    --line: #2b3431;
+    --accent: #5fcab3;
+    --accent-ink: #06201b;
+    --accent-soft: #173a33;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #0f1312;
+  --surface: #161c1a;
+  --sunk: #1d2422;
+  --ink: #e6ece9;
+  --muted: #9ba7a2;
+  --line: #2b3431;
+  --accent: #5fcab3;
+  --accent-ink: #06201b;
+  --accent-soft: #173a33;
+  color-scheme: dark;
+}
+
 @layer base {
   html {
-    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
-  
   body {
-    @apply bg-gray-50 text-gray-900;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    line-height: 1.1;
+  }
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: var(--accent-soft);
+    color: var(--ink);
   }
 }
 
 @layer components {
+  /* Uppercase mono field label, as printed on an asset tag. */
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
   .btn {
-    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply inline-flex items-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold transition-colors;
   }
-  
   .btn-primary {
-    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+    @apply btn bg-accent text-accent-ink hover:opacity-90;
   }
-  
-  .btn-secondary {
-    @apply btn bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500;
+  .btn-ghost {
+    @apply btn border border-line text-ink hover:border-accent hover:text-accent;
   }
-  
-  .card {
-    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+  .chip {
+    @apply rounded border border-line px-2 py-0.5 font-mono text-[0.75rem] text-muted;
   }
-  
-  .input {
-    @apply block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500;
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #1e293b;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #475569;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
-}
-
-* {
-  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
-}
-
-/* Custom gradient animation */
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+  /* Code 39-style bars, drawn with gradients. Decorative only. */
+  .barcode {
+    background-image: repeating-linear-gradient(
+      90deg,
+      var(--ink) 0 2px,
+      transparent 2px 4px,
+      var(--ink) 4px 5px,
+      transparent 5px 8px,
+      var(--ink) 8px 11px,
+      transparent 11px 12px,
+      var(--ink) 12px 13px,
+      transparent 13px 17px
+    );
   }
 }
 
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient 4s ease infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-  100% {
-    background-position: 200% 0;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
-}
-
-.shimmer {
-  background: linear-gradient(
-    110deg,
-    transparent 25%,
-    rgba(255, 255, 255, 0.1) 50%,
-    transparent 75%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 2s infinite;
-}
-
-.glass {
-  backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.125);
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.float {
-  animation: float 3s ease-in-out infinite;
 }

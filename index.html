@@ -2,12 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Haad Fida - Full Stack Developer</title>
+    <title>Haad Fida · Principal software engineer building AI-native tools</title>
+    <meta
+      name="description"
+      content="Haad Fida is a principal software engineer (Rails, React, React Native) building AI-native tools, including AssetPilot, an AI operations agent for IT inventories."
+    />
+    <link rel="canonical" href="https://haadfida.github.io/" />
+    <meta name="theme-color" content="#f2f4f1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f1312" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://haadfida.github.io/" />
+    <meta property="og:title" content="Haad Fida · Principal software engineer" />
+    <meta property="og:description" content="Principal software engineer (Rails, React, React Native) building AI-native tools. Flagship: AssetPilot, an AI operations agent for IT inventories." />
+    <meta property="og:image" content="https://haadfida.github.io/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Haad Fida, principal software engineer building AI-native tools" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Haad Fida · Principal software engineer" />
+    <meta name="twitter:description" content="Principal software engineer (Rails, React, React Native) building AI-native tools." />
+    <meta name="twitter:image" content="https://haadfida.github.io/og.png" />
+
+    <script>
+      // Apply a saved theme before first paint to avoid a flash of the wrong one.
+      try {
+        var t = localStorage.getItem('theme')
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <p style="padding: 16px">Haad Fida, principal software engineer. Find my work at https://github.com/haadfida.</p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

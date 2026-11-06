@@ -1,141 +1,83 @@
-# Modern Portfolio 🚀
+# haadfida.github.io
 
-A beautiful, responsive portfolio website built with React, TypeScript, Tailwind CSS, and Framer Motion.
+Source for Haad Fida's portfolio site, served at <https://haadfida.github.io>.
 
-## ✨ Features
+It is a single page: a hero, two featured projects (AssetPilot and PSX Monitor), a grid of smaller
+projects, experience, skills and contact details. It works in light and dark themes (following the
+system setting, with a toggle in the header) and respects `prefers-reduced-motion`.
 
-- **Modern Design**: Clean, professional design with smooth animations
-- **Responsive**: Fully responsive across all devices
-- **Dark Theme**: Eye-friendly dark theme with gradient accents
-- **Smooth Animations**: Powered by Framer Motion
-- **Fast Loading**: Optimized with Vite for lightning-fast performance
-- **SEO Ready**: Optimized for search engines
-- **Free Hosting**: Deploy for free on GitHub Pages, Vercel, or Netlify
+| Desktop | Mobile |
+| --- | --- |
+| ![Desktop, light theme](docs/desktop.webp) | ![Mobile, dark theme](docs/mobile-dark.webp) |
 
-## 🛠️ Tech Stack
+More captures: [`docs/desktop-dark.webp`](docs/desktop-dark.webp), [`docs/mobile.webp`](docs/mobile.webp).
 
-- **React 19** - UI library
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling
-- **Framer Motion** - Animations
-- **Vite** - Build tool
-- **Lucide React** - Icons
+## Stack
 
-## 🚀 Quick Start
+Vite, React 19, TypeScript, Tailwind CSS 3, Framer Motion (`LazyMotion`, used only for the hero entrance)
+and lucide-react icons. Fonts are self-hosted through Fontsource: Bricolage Grotesque, Public Sans and
+IBM Plex Mono.
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/modern-portfolio.git
-   cd modern-portfolio
-   ```
+## Run it
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+Needs Node 20 or newer.
 
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:5173`
-
-## 📝 Customization
-
-### Personal Information
-Edit `src/App.tsx` and update:
-- Your name in the hero section
-- Your description and bio
-- Your skills and experience
-- Your project information
-- Your contact information and social links
-
-### Styling
-- Colors: Modify the gradient colors in `src/App.tsx`
-- Layout: Adjust spacing and layout in the component sections
-- Animations: Customize Framer Motion animations
-
-## 🌐 Free Deployment Options
-
-### Option 1: GitHub Pages (Free)
-1. **Setup GitHub Pages**
-   ```bash
-   npm install
-   npm run deploy
-   ```
-
-2. **Enable GitHub Pages**
-   - Go to your repository settings
-   - Navigate to "Pages"
-   - Select "Deploy from a branch"
-   - Choose "gh-pages" branch
-   - Your site will be available at `https://yourusername.github.io/modern-portfolio/`
-
-### Option 2: Vercel (Free)
-1. Push your code to GitHub
-2. Visit [vercel.com](https://vercel.com)
-3. Sign up with GitHub
-4. Import your repository
-5. Deploy with one click!
-
-### Option 3: Netlify (Free)
-1. Push your code to GitHub
-2. Visit [netlify.com](https://netlify.com)
-3. Sign up with GitHub
-4. Connect your repository
-5. Deploy automatically!
-
-## 📁 Project Structure
-
-```
-modern-portfolio/
-├── public/
-│   └── vite.svg
-├── src/
-│   ├── assets/
-│   ├── App.tsx          # Main component
-│   ├── App.css          # Component styles
-│   ├── index.css        # Global styles
-│   └── main.tsx         # Entry point
-├── index.html
-├── package.json
-├── tailwind.config.js   # Tailwind configuration
-├── tsconfig.json        # TypeScript configuration
-└── vite.config.ts       # Vite configuration
+```sh
+npm install
+npm run dev        # http://localhost:5173
+npm run build      # type-checks and writes dist/
+npm run preview    # serves dist/ at http://localhost:4173
+npm run lint
 ```
 
-## 🎨 Customization Guide
+## Where things live
 
-### Adding New Sections
-1. Create a new section in `App.tsx`
-2. Add navigation link to the nav array
-3. Implement smooth scrolling with `scrollToSection`
+| Path | What it holds |
+| --- | --- |
+| `src/data/projects.ts` | Every project card, the contact links, and `DEMO_URL` |
+| `src/components/` | `Header`, `Hero`, `FeaturedProjects`, `MoreProjects`, `Experience`, `Skills`, `Contact` |
+| `src/index.css` | Color and type tokens for both themes |
+| `src/assets/` | Project screenshots as WebP, each 150 KB or less |
+| `public/` | Favicons, `og.png`, `robots.txt`, `sitemap.xml`, `.nojekyll`, `.well-known/assetlinks.json` |
+| `scripts/` | Image optimisation and screenshot scripts |
 
-### Changing Colors
-Update the gradient colors throughout the app:
-- Hero section: `from-purple-400 via-pink-400 to-red-400`
-- Buttons: `from-purple-600 to-pink-600`
-- Accents: `purple-400`, `pink-400`
+### Turning on the AssetPilot demo link
 
-### Adding Projects
-Update the `projects` array in `App.tsx`:
-```tsx
-{
-  title: "Your Project",
-  description: "Project description...",
-  image: "project-image-url",
-  tech: ["React", "TypeScript", "etc."],
-  github: "github-repo-url",
-  demo: "live-demo-url"
-}
+`DEMO_URL` in `src/data/projects.ts` is `null`, which hides AssetPilot's **Live demo** button. Set it to
+the deployed URL and the button appears.
+
+### Adding or replacing a screenshot
+
+```sh
+npm run images -- path/to/screenshot.png   # writes src/assets/<name>.webp and <name>-700.webp
 ```
 
-## 📧 Support
+The script resizes to at most 1400px wide and lowers WebP quality until the file is 150 KB or less. It
+also writes a 700px copy used in `srcset` on small screens.
 
-If you have any questions or need help customizing your portfolio, feel free to open an issue!
+### Refreshing the README screenshots and the Open Graph image
 
-## 📄 License
+```sh
+npm run build && npm run preview &
+npm run screenshots     # SITE_URL defaults to http://localhost:4173/
+```
 
-This project is open source and available under the [MIT License](LICENSE). 
+This writes `docs/*.webp` and `public/og.png` (1200x630, taken from the hero). It uses `playwright-core`
+with an installed Chromium: set `CHROMIUM_PATH`, or it picks the newest one in
+`~/Library/Caches/ms-playwright`. Run `npm run build` again afterwards so `dist/` has the new `og.png`.
+
+## Deploy
+
+The site is served from the root of `haadfida.github.io`, so `vite.config.ts` uses `base: '/'`.
+
+```sh
+npm run deploy
+```
+
+This builds, then uses `gh-pages` to push `dist/` to the `master` branch of
+`https://github.com/haadfida/haadfida.github.io.git`. `--dotfiles` is set so `.nojekyll` and
+`.well-known/assetlinks.json` (the Android app link for `com.haad.cv`) are published too. You need push
+access to that repository.
+
+The `gh-pages` branch of this repository holds the old build from when the site lived at
+`/modern-portfolio/`; the source is on `master`.

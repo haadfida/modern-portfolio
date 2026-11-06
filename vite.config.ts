@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// Served from the root of https://haadfida.github.io, so assets resolve from '/'.
 export default defineConfig({
   plugins: [react()],
-  base: '/modern-portfolio/',
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
