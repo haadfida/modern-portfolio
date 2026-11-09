@@ -10,7 +10,7 @@ import sprintTrackerSmall from '../assets/sprint-tracker-700.webp'
  * AssetPilot's hosted demo. Leave as null until it is deployed; the Live button
  * stays hidden while this is null.
  */
-export const DEMO_URL: string | null = null
+export const DEMO_URL: string | null = 'https://assetpilot-seven.vercel.app'
 
 export type Project = {
   slug: string
