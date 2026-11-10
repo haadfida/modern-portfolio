@@ -1,5 +1,5 @@
 const groups: { name: string; items: string[] }[] = [
-  { name: 'Backend', items: ['Ruby on Rails', 'PostgreSQL', 'MySQL', 'Python', 'FastAPI'] },
+  { name: 'Backend', items: ['Ruby on Rails', 'MySQL', 'REST APIs', 'GraphQL', 'Node.js', 'Python'] },
   { name: 'Frontend', items: ['React', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Vite'] },
   { name: 'Mobile', items: ['React Native', 'Expo', 'SQLite'] },
   { name: 'AI', items: ['Claude API and tool use', 'MCP servers', 'LangGraph', 'Graph RAG with Neo4j', 'Agent evals'] },
