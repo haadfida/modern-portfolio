@@ -35,7 +35,7 @@ export const featuredProjects: Project[] = [
       'Tool-using Claude agent that streams each step to the UI over server-sent events',
       'Live dependency graph of every asset and service the agent touches',
       'MCP server exposing the same seven inventory tools to Claude Code and other clients',
-      '55-case eval suite with deterministic grading across seven dimensions',
+      '55-case eval suite graded deterministically on seven dimensions: 51/55 on the first live run, 55/55 after one prompt fix and three corrected checks',
       'Replay mode: recorded runs play through the real pipeline, so no API key is needed to try it',
     ],
     stack: ['Rails 8.1', 'PostgreSQL', 'Anthropic SDK', 'MCP', 'React 19', 'React Flow', 'TypeScript'],
