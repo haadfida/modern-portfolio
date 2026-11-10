@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Check, Copy, Github, Linkedin } from 'lucide-react'
+import { Check, Copy, FileText, Github, Linkedin } from 'lucide-react'
 import { links } from '../data/projects'
 
 export default function Contact() {
@@ -49,6 +49,12 @@ export default function Contact() {
             <a href={links.linkedin} className="btn-ghost" target="_blank" rel="noopener noreferrer">
               <Linkedin size={16} aria-hidden="true" />
               linkedin.com/in/haadfida
+            </a>
+          </li>
+          <li>
+            <a href={links.cv} className="btn-ghost" target="_blank" rel="noopener noreferrer">
+              <FileText size={16} aria-hidden="true" />
+              CV (PDF)
             </a>
           </li>
         </ul>

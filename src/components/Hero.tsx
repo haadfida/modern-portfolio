@@ -1,5 +1,5 @@
 import { m } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
+import { ArrowDown, FileText, Github, Linkedin, Mail } from 'lucide-react'
 import { links } from '../data/projects'
 
 const tag: [string, string][] = [
@@ -26,6 +26,10 @@ export default function Hero() {
             <a href="#work" className="btn-primary">
               <ArrowDown size={16} aria-hidden="true" />
               See the work
+            </a>
+            <a href={links.cv} className="btn-ghost" target="_blank" rel="noopener noreferrer">
+              <FileText size={16} aria-hidden="true" />
+              CV
             </a>
             <a href={links.github} className="btn-ghost" target="_blank" rel="noopener noreferrer">
               <Github size={16} aria-hidden="true" />

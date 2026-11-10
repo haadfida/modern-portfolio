@@ -129,4 +129,6 @@ export const links = {
   github: 'https://github.com/haadfida',
   linkedin: 'https://linkedin.com/in/haadfida',
   email: 'haad99@gmail.com',
+  /** One-page public CV in public/. Keep the employer generic and leave out the phone number. */
+  cv: `${import.meta.env.BASE_URL}Haad_Fida_CV.pdf`,
 }
