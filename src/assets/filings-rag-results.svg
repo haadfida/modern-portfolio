@@ -41,8 +41,8 @@
 <text x="549.2" y="281" font-size="12" font-weight="700" fill="#0b0b0b">68%</text>
 <text x="24" y="323" font-size="14" font-weight="500" fill="#0b0b0b">Evidence pages given</text>
 <text x="24" y="340" font-size="12" fill="#8a8984">ceiling</text>
-<path d="M210.0,308.0 h456.6 a4.0,4.0 0 0 1 4.0,4.0 v6.0 a4.0,4.0 0 0 1 -4.0,4.0 h-456.6 z" fill="#2a78d6"/>
-<text x="676.6" y="319" font-size="12" font-weight="500" fill="#0b0b0b">94%</text>
-<path d="M210.0,324.0 h456.6 a4.0,4.0 0 0 1 4.0,4.0 v6.0 a4.0,4.0 0 0 1 -4.0,4.0 h-456.6 z" fill="#eb6834"/>
-<text x="676.6" y="335" font-size="12" font-weight="500" fill="#0b0b0b">94%</text>
+<path d="M210.0,308.0 h461.5 a4.0,4.0 0 0 1 4.0,4.0 v6.0 a4.0,4.0 0 0 1 -4.0,4.0 h-461.5 z" fill="#2a78d6"/>
+<text x="681.5" y="319" font-size="12" font-weight="500" fill="#0b0b0b">95%</text>
+<path d="M210.0,324.0 h461.5 a4.0,4.0 0 0 1 4.0,4.0 v6.0 a4.0,4.0 0 0 1 -4.0,4.0 h-461.5 z" fill="#eb6834"/>
+<text x="681.5" y="335" font-size="12" font-weight="500" fill="#0b0b0b">95%</text>
 </svg>

@@ -34,7 +34,7 @@ export const featuredProjects: Project[] = [
       "Question answering over SEC filings where every figure cites its page. Ask for 3M's 2018 capital expenditure and get $1,577 million, with the cash flow statement page it came from.",
     highlights: [
       'Measured on FinanceBench (150 analyst questions over 84 real filings) with a held-out test set: 78% correct, 68% correct and citing the evidence page',
-      'LLM grader validated against human labels: 94% agreement (Cohen’s kappa 0.91)',
+      'LLM grader validated against human labels it had not seen during design: 92% agreement (Cohen’s kappa 0.88)',
       'Statement routing and query rewriting lifted evidence-page recall from 28% with keyword search to 89%',
       'Table-aware PDF parsing keeps line items, units and years together: 90 of 90 benchmark rows intact',
       'Every run logs tokens, cost and latency ($0.026 per question); failures and dead ends are written up',
@@ -43,7 +43,7 @@ export const featuredProjects: Project[] = [
     repo: 'https://github.com/haadfida/filings-rag',
     image: {
       src: filingsRagChart,
-      alt: "Test-set accuracy on FinanceBench. Model's memory only: 70% correct, 0% grounded. Keyword search: 43% and 22%. filings-rag: 78% and 68%. Evidence pages given: 94% and 94%.",
+      alt: "Test-set accuracy on FinanceBench. Model's memory only: 70% correct, 0% grounded. Keyword search: 43% and 22%. filings-rag: 78% and 68%. Evidence pages given: 95% and 95%.",
       width: 760,
       height: 402,
     },
