@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="402" viewBox="0 0 760 402" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Test-set accuracy: correct and grounded, by method">
+<rect width="760" height="402" rx="8" fill="#fcfcfb"/>
+<text x="24" y="34" font-size="17" font-weight="600" fill="#0b0b0b">FinanceBench, 100 held-out questions</text>
+<text x="24" y="56" font-size="13" fill="#52514e">Grounded = correct and cites a page the benchmark marks as evidence</text>
+<rect x="210" y="69" width="10" height="10" rx="2" fill="#2a78d6"/>
+<text x="226" y="78" font-size="12" fill="#52514e">Correct</text>
+<rect x="306" y="69" width="10" height="10" rx="2" fill="#eb6834"/>
+<text x="322" y="78" font-size="12" fill="#52514e">Grounded</text>
+<line x1="210.0" y1="86" x2="210.0" y2="354" stroke="#e6e5e1" stroke-width="1"/>
+<text x="210.0" y="372" font-size="11" text-anchor="middle" fill="#8a8984">0%</text>
+<line x1="332.5" y1="86" x2="332.5" y2="354" stroke="#e6e5e1" stroke-width="1"/>
+<text x="332.5" y="372" font-size="11" text-anchor="middle" fill="#8a8984">25%</text>
+<line x1="455.0" y1="86" x2="455.0" y2="354" stroke="#e6e5e1" stroke-width="1"/>
+<text x="455.0" y="372" font-size="11" text-anchor="middle" fill="#8a8984">50%</text>
+<line x1="577.5" y1="86" x2="577.5" y2="354" stroke="#e6e5e1" stroke-width="1"/>
+<text x="577.5" y="372" font-size="11" text-anchor="middle" fill="#8a8984">75%</text>
+<line x1="700.0" y1="86" x2="700.0" y2="354" stroke="#e6e5e1" stroke-width="1"/>
+<text x="700.0" y="372" font-size="11" text-anchor="middle" fill="#8a8984">100%</text>
+<text x="24" y="107" font-size="14" font-weight="500" fill="#0b0b0b">Model's memory only</text>
+<text x="24" y="124" font-size="12" fill="#8a8984">no documents</text>
+<path d="M210.0,92.0 h339.0 a4.0,4.0 0 0 1 4.0,4.0 v6.0 a4.0,4.0 0 0 1 -4.0,4.0 h-339.0 z" fill="#2a78d6"/>
+<text x="559.0" y="103" font-size="12" font-weight="500" fill="#0b0b0b">70%</text>
+<text x="216.0" y="119" font-size="12" font-weight="500" fill="#0b0b0b">0%</text>
+<text x="24" y="161" font-size="14" font-weight="500" fill="#0b0b0b">Keyword search</text>
+<text x="24" y="178" font-size="12" fill="#8a8984">BM25, top 5 pages</text>
+<path d="M210.0,146.0 h206.7 a4.0,4.0 0 0 1 4.0,4.0 v6.0 a4.0,4.0 0 0 1 -4.0,4.0 h-206.7 z" fill="#2a78d6"/>
+<text x="426.7" y="157" font-size="12" font-weight="500" fill="#0b0b0b">43%</text>
+<path d="M210.0,162.0 h103.8 a4.0,4.0 0 0 1 4.0,4.0 v6.0 a4.0,4.0 0 0 1 -4.0,4.0 h-103.8 z" fill="#eb6834"/>
+<text x="323.8" y="173" font-size="12" font-weight="500" fill="#0b0b0b">22%</text>
+<text x="24" y="215" font-size="14" font-weight="500" fill="#0b0b0b">Statement routing</text>
+<text x="24" y="232" font-size="12" fill="#8a8984">milestone 4</text>
+<path d="M210.0,200.0 h334.1 a4.0,4.0 0 0 1 4.0,4.0 v6.0 a4.0,4.0 0 0 1 -4.0,4.0 h-334.1 z" fill="#2a78d6"/>
+<text x="554.1" y="211" font-size="12" font-weight="500" fill="#0b0b0b">69%</text>
+<path d="M210.0,216.0 h290.0 a4.0,4.0 0 0 1 4.0,4.0 v6.0 a4.0,4.0 0 0 1 -4.0,4.0 h-290.0 z" fill="#eb6834"/>
+<text x="510.0" y="227" font-size="12" font-weight="500" fill="#0b0b0b">60%</text>
+<text x="24" y="269" font-size="14" font-weight="700" fill="#0b0b0b">filings-rag</text>
+<text x="24" y="286" font-size="12" fill="#8a8984">routing + query rewrites</text>
+<path d="M210.0,254.0 h378.2 a4.0,4.0 0 0 1 4.0,4.0 v6.0 a4.0,4.0 0 0 1 -4.0,4.0 h-378.2 z" fill="#2a78d6"/>
+<text x="598.2" y="265" font-size="12" font-weight="700" fill="#0b0b0b">78%</text>
+<path d="M210.0,270.0 h329.2 a4.0,4.0 0 0 1 4.0,4.0 v6.0 a4.0,4.0 0 0 1 -4.0,4.0 h-329.2 z" fill="#eb6834"/>
+<text x="549.2" y="281" font-size="12" font-weight="700" fill="#0b0b0b">68%</text>
+<text x="24" y="323" font-size="14" font-weight="500" fill="#0b0b0b">Evidence pages given</text>
+<text x="24" y="340" font-size="12" fill="#8a8984">ceiling</text>
+<path d="M210.0,308.0 h456.6 a4.0,4.0 0 0 1 4.0,4.0 v6.0 a4.0,4.0 0 0 1 -4.0,4.0 h-456.6 z" fill="#2a78d6"/>
+<text x="676.6" y="319" font-size="12" font-weight="500" fill="#0b0b0b">94%</text>
+<path d="M210.0,324.0 h456.6 a4.0,4.0 0 0 1 4.0,4.0 v6.0 a4.0,4.0 0 0 1 -4.0,4.0 h-456.6 z" fill="#eb6834"/>
+<text x="676.6" y="335" font-size="12" font-weight="500" fill="#0b0b0b">94%</text>
+</svg>

@@ -39,7 +39,7 @@ export default function FeaturedProjects() {
               </div>
 
               <div className="min-w-0 lg:col-span-5">
-                <p className="label">{i === 0 ? 'Flagship' : 'Live'} · github.com/haadfida/{p.repo.split('/').pop()}</p>
+                <p className="label">{i === 0 ? 'Flagship' : p.live ? 'Live' : 'Open source'} · github.com/haadfida/{p.repo.split('/').pop()}</p>
                 <h3 id={`${p.slug}-title`} className="mt-3 text-3xl font-bold">
                   {p.name}
                 </h3>
